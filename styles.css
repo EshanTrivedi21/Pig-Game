@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 70%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  word-spacing: 2px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 600;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background-image: linear-gradient(to right bottom, #753682 0%, #bf2e34 100%);
+  opacity: 0.75;
+  border-radius: 10px;
+  color: #fff;
+  width: 60%;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.5s;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(10px);
+  padding: 0.6rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.25);
+}
+
+.btn--new {
+  top: 11.5vh;
+}
+
+.btn--roll {
+  top: 63vh;
+}
+
+.btn--hold {
+  top: 74vh;
+  padding: 0.6rem 4.5rem;
+}
+
+.btn:hover {
+    transform: translate(-50%, -3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 30vh;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.dice:hover {
+    animation: shake 0.25s;
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 600;
+  color: #c7365f;
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translateX(-50%) translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translateX(-50%) translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translateX(-50%) translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translateX(-50%) translate3d(4px, 0, 0);
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    main {
+        position: relative;
+        width: 92.5vw;
+    }
+
+    .player {
+        padding: 9rem;
+    }
+
+    .dice {
+      top: 30vh;
+      height: 9rem;
+    }
+    
+    .btn {
+      font-size: 1.6rem;
+      padding: 0.5rem 2rem;
+    }
+    
+    .btn--new {
+      top: 10rem;
+    }
+
+    .btn--roll {
+      top: 61vh;
+    }
+
+    .btn--hold {
+      top: 72vh;
+      padding: 0.6rem 3.75rem;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+    main {
+        width: 90vw;
+        flex-direction: column;
+    }
+
+    .player {
+        padding: 2.5rem 0rem;
+        justify-content: center;
+    }
+      
+    .name {
+        font-size: 3rem;
+        letter-spacing: 4px;
+        margin: 0rem;
+    }
+      
+    .score {
+        font-size: 4rem;
+        margin: 1rem;
+    }
+
+    .current {
+      width: 20rem;
+      padding: 0rem;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .current-label {
+      text-transform: uppercase;
+      margin: 1rem;
+      font-size: 2rem;
+      color: #ddd;
+    }
+    
+    .current-score {
+      font-size: 2.5rem;
+      margin-top: 0.75rem;
+      transform: translateX(5rem);
+    }
+
+    .btn--new {
+      padding: 0% 1.5vw;
+      left: 6rem;
+      top: 1rem;
+    }
+
+    .btn--roll {
+      padding: 0% 1.5vw;
+      transform: translate(-50% , 50%);
+      top: 46.5%;
+      left: 18%;
+    }
+
+    .btn--hold {
+      padding: 0% 5vw;
+      transform: translate(-50% , 50%);
+      top: 46.5%;
+      left: 82%;
+    }
+
+    .dice {
+      top: 50%;
+      height: 7rem;
+      transform: translate(-50%, -50%);
+    }
+
+    .dice:hover {
+      animation: none;
+    }
+}
