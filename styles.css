@@ -158,12 +158,45 @@ main {
 }
 
 .player--winner {
-  background-color: #2f2f2f;
+  background-color: #77DD77;
 }
 
 .player--winner .name {
   font-weight: 600;
-  color: #c7365f;
+  color: #000;
+}
+
+.player--winner .score {
+  font-weight: 600;
+  color: #000;
+}
+
+.player--winner .current {
+  font-weight: 600;
+  background-image: none;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.player--looser {
+  background-color: #FF6961;
+}
+
+.player--looser .name {
+  font-weight: 600;
+  color: #000;
+}
+
+.player--looser .score {
+  font-weight: 600;
+  color: #000;
+}
+
+.player--looser .current {
+  font-weight: 600;
+  background-image: none;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 @keyframes shake {
