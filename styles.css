@@ -151,7 +151,6 @@ main {
   top: 30vh;
   transform: translateX(-50%);
   height: 10rem;
-  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
 .dice:hover {
@@ -284,6 +283,10 @@ main {
     }
 
     .btn:hover {
+      transform: translate(-50% , 50%);
+    }
+
+    .btn:active {
       transform: translate(-50% , 50%);
     }
 
