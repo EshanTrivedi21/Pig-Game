@@ -62,7 +62,7 @@ main {
 }
 
 .player--active {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .player--active .name {
   font-weight: 600;
@@ -199,6 +199,59 @@ main {
   color: #ffffff;
 }
 
+.hidden {
+  display: none;
+}
+
+.title {
+  font-size: 4.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5rem;
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.close-modal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80vh;
+  padding: 0.6rem 4.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right bottom, #753682 0%, #bf2e34 100%);
+  border-radius: 10px;
+  color: #fff;
+}
+
+.tutorial {
+  font-size: 2.4rem;
+  padding-top: 3rem;
+  text-align: left;
+  letter-spacing: 0.5px;
+  word-spacing: 0.5px;
+}
+
 @keyframes shake {
     10%, 90% {
       transform: translateX(-50%) translate3d(-1px, 0, 0);
@@ -249,9 +302,44 @@ main {
       top: 72vh;
       padding: 0.6rem 3.75rem;
     }
+
+    .close-modal {
+      padding: 0.6rem 4.5rem;
+      font-size: 2.5rem;
+    }
+
+    .modal {
+      padding: 4rem;
+    }
+
+    @media only screen and (min-height: 1100px){
+      
+      .title {
+        font-size: 5rem;
+      }
+
+      .tutorial {
+        font-size: 2.6rem;
+      }
+
+    }
+
+    @media only screen and (max-height: 800px){
+      
+      .title {
+        font-size: 3.5rem;
+        margin-top: 1rem;
+        margin: 0%;
+      }
+
+      .tutorial {
+        font-size: 2rem;
+      }
+
+    }
 }
 
-@media only screen and (max-width: 925px) {
+@media only screen and (max-width: 980px) {
     main {
         width: 90vw;
         height: 85vh;
@@ -331,5 +419,101 @@ main {
 
     .dice:hover {
       animation: none;
+    }
+
+    .modal {
+      padding: 2.5rem;
+    }
+
+    .close-modal {
+      padding: 0.5rem 5rem;
+      font-size: 2.25rem;
+      top: 85;
+    }
+
+    .title {
+      font-size: 3rem;
+      margin-bottom: 0rem;
+      font-weight: 500;
+    }
+
+    .tutorial {
+      font-size: 1.45rem;
+      padding-top: 2.5rem;
+    }
+
+    @media only screen and (min-width: 650px){
+
+      .title {
+        font-size: 2.4rem;
+      }
+  
+      .tutorial {
+        font-size: 1.5rem;
+        padding-top: 1.5rem;
+      }
+    }
+
+    @media only screen and (max-height: 750px){
+  
+      .tutorial {
+        font-size: 1.3rem;
+      }
+
+      @media only screen and (min-width: 450px){
+
+        .title {
+          font-size: 2.75rem;
+        }
+    
+        .tutorial {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 350px){
+
+      .title {
+        font-size: 2.4rem;
+      }
+  
+      .tutorial {
+        font-size: 1.175rem;
+        padding-top: 1.5rem;
+      }
+    }
+
+    @media only screen and (min-height: 875px) and (max-height: 1000px){
+  
+      .tutorial {
+        font-size: 1.55rem;
+      }
+
+    }
+
+    @media only screen and (min-height: 1000px){
+      
+      .title {
+        font-size: 5rem;
+      }
+
+      .tutorial {
+        font-size: 2.5rem;
+      }
+
+    }
+
+    
+    @media only screen and (min-height: 1250px){
+      
+      .title {
+        font-size: 5rem;
+      }
+
+      .tutorial {
+        font-size: 3rem;
+      }
+
     }
 }

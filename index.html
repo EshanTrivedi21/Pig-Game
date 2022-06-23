@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Pig Game</title>
+    <title>The Pig Game</title>
     <link rel="icon" href="images/favicon.png">
+
   </head>
+
   <body>
-    <main>
+    <header>
+
+      <div class="modal">
+
+        <h1 class="title">THE PIG GAME</h1>
+        <p class="tutorial">
+          The Pig Game is a basic Multiplayer Game where 2 Players Race against each other to reach 100 Points. Players take turns with a die . The Game start with Players 1's turn. On a Player's turn, they can roll the dice as often as they like. If the roll is a 2, 3, 4, 5, or 6, the Player adds that many points to their Current Score for the turn. The Player may also choose to end their Turn and Bank their Current Score to the Total Score. But the Player is risking every time they roll because if the result is a 1, they lose the Current Score, and the turn changes. The other Player repeats the same process of risking to roll or holding to bank the score. So the Pig Game is a Risk Game. The Player who Hurdles and Reaches the Target Score (100) first Wins. 
+        </p>
+        <button class="btn close-modal">START</button>
+
+      </div>
+
+    </header>
+
+    <main class="hidden">
+
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">0</p>
@@ -18,6 +37,7 @@
           <p class="current-score" id="current--0">0</p>
         </div>
       </section>
+
       <section class="player player--1">
         <h2 class="name" id="name--1">Player 2</h2>
         <p class="score" id="score--1">0</p>
@@ -28,10 +48,15 @@
       </section>
 
       <img src="images/dice.png" alt="Playing dice" class="dice" />
+
       <button class="btn btn--new"> NEW Game</button>
       <button class="btn btn--roll"> ROLL DICE</button>
       <button class="btn btn--hold"> HOLD</button>
+
     </main>
+
     <script src="script.js"></script>
+
   </body>
+
 </html>
