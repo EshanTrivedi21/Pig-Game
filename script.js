@@ -8,6 +8,8 @@ const images = ["images/dice-1.png", "images/dice-2.png", "images/dice-3.png", "
 // CREATING SELECTOR VARIABLES //
 const diceElement = document.querySelector(".dice");
 
+const close_Modal = document.querySelector(".close-modal");
+
 const player_0_Element = document.querySelector(".player--0");
 const player_1_Element = document.querySelector(".player--1");
 
@@ -22,6 +24,20 @@ const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 
 let scores, currentScore, activePlayer, playing;
+
+// STARTING THE GAME //
+const closeModal = function() {
+
+    document.querySelector(".intro").classList.add("hidden");
+    document.querySelector(".content").classList.remove("hidden")
+
+}
+
+close_Modal.addEventListener(
+
+    "click" , closeModal
+
+)
 
 // INITIALIZATION FUNCTION//
 const init = function(){
@@ -48,6 +64,9 @@ const init = function(){
     player_1_Element.classList.remove("player--looser"); 
 
     diceElement.src = "images/dice.png";
+
+    document.querySelector("#name--0").textContent = "PLAYER 1";
+    document.querySelector("#name--1").textContent = "PLAYER 2";
 
 }
 
@@ -104,8 +123,13 @@ btnHold.addEventListener(
                 playing = false;
                 document.querySelector(`.player--${activePlayer}`).classList.add("player--winner");
                 document.querySelector(`.player--${activePlayer}`).classList.remove("player--active");
+                document.querySelector(`#name--${activePlayer}`).textContent = "WINNER";
+
                 activePlayer = activePlayer === 0 ? 1 : 0;
+
                 document.querySelector(`.player--${activePlayer}`).classList.add("player--looser");
+                document.querySelector(`#name--${activePlayer}`).textContent = "LOOSER";
+
                 diceElement.src = "images/dice.png";
 
             } else {

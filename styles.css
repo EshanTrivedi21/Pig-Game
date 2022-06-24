@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@300&display=swap');
 
 * {
   margin: 0;
@@ -245,11 +246,12 @@ main {
 }
 
 .tutorial {
-  font-size: 2.4rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.6rem;
   padding-top: 3rem;
   text-align: left;
-  letter-spacing: 0.5px;
-  word-spacing: 0.5px;
+  letter-spacing: 0.75px;
+  word-spacing: 0.75px;
 }
 
 @keyframes shake {
@@ -305,7 +307,8 @@ main {
 
     .close-modal {
       padding: 0.6rem 4.5rem;
-      font-size: 2.5rem;
+      font-size: 2.25rem;
+      top: 79vh;
     }
 
     .modal {
@@ -339,7 +342,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 950px) {
     main {
         width: 90vw;
         height: 85vh;
@@ -422,13 +425,16 @@ main {
     }
 
     .modal {
+      width: 90vw;
+      height: 85vh;
       padding: 2.5rem;
     }
 
     .close-modal {
-      padding: 0.5rem 5rem;
-      font-size: 2.25rem;
-      top: 85;
+      padding: 0.5rem 2.5rem;
+      font-size: 1.1rem;
+      top: 78vh;
+      width: 46%;
     }
 
     .title {
@@ -438,7 +444,7 @@ main {
     }
 
     .tutorial {
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       padding-top: 2.5rem;
     }
 
@@ -452,6 +458,7 @@ main {
         font-size: 1.5rem;
         padding-top: 1.5rem;
       }
+
     }
 
     @media only screen and (max-height: 750px){
@@ -499,7 +506,13 @@ main {
       }
 
       .tutorial {
+        padding-top: 5rem;
         font-size: 2.5rem;
+      }
+
+      .close-modal {
+        font-size: 2rem;
+        top: 79vh;
       }
 
     }
@@ -513,6 +526,11 @@ main {
 
       .tutorial {
         font-size: 3rem;
+      }
+
+      .close-modal {
+        font-size: 2.25rem;
+        top: 80vh;
       }
 
     }
