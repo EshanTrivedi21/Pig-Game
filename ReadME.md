@@ -9,5 +9,6 @@
   </p>
   <hr>
   <h3> Enjoy this Game with your Friends and Family! Thank You.</h3>
+  <h3>Tap on this Link to Play the Game: https://eshantrivedi21.github.io/Pig-Game/</h3>
   <hr>
  </html>
